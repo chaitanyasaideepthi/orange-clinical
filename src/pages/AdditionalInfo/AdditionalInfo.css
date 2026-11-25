@@ -1,0 +1,141 @@
+
+.additional-info-page {
+  width: 100%;
+  padding: 45px 3%;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.additional-info-layout {
+  display: grid !important;
+  grid-template-columns: 27% minmax(0, 1fr) !important;
+  gap: 25px;
+  align-items: start;
+}
+
+/* Left heading */
+.additional-info-title {
+  padding: 15px 5px;
+}
+
+.additional-info-title h2 {
+  margin: 0;
+  padding: 0;
+  color: #171717;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Right accordion */
+.additional-info-content {
+  width: 100%;
+}
+
+.info-section {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.info-heading {
+  width: 100% !important;
+  min-height: 58px;
+  padding: 15px 5px !important;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  border: none !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  color: #171717 !important;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.info-heading:hover {
+  color: #171717 !important;
+  background: #fff !important;
+}
+
+.arrow {
+  color: #555;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.info-content {
+  padding: 12px 5px 22px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.orange-text {
+  color: #000;
+  line-height: 1.8;
+}
+
+.orange-text p {
+  margin: 0 0 15px;
+}
+
+.orange-text strong {
+  color: #000;
+}
+
+/* Blue links */
+.orange-text a,
+.centres-table a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.orange-text a:hover,
+.centres-table a:hover {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* Table */
+.centres-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.centres-table th,
+.centres-table td {
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  text-align: left;
+  vertical-align: top;
+  color: #000;
+}
+
+.centres-table th {
+  background: #f8f8f8;
+}
+
+/* Only Popular Blood Tests in orange */
+.popular-tests {
+  color: #ff6b00 !important;
+}
+
+@media (max-width: 768px) {
+  .additional-info-layout {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  .additional-info-page {
+    padding: 25px 4%;
+  }
+
+  .info-heading {
+    font-size: 15px;
+  }
+
+  .centres-table {
+    font-size: 12px;
+  }
+}

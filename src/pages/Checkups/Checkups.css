@@ -1,0 +1,314 @@
+
+/* Main Page */
+.checkups-page {
+  width: 100%;
+  padding: 15px 20px;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #25201e;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+
+.breadcrumb strong {
+  color: #777777;
+  font-weight: 600;
+}
+
+/* Category Section */
+.category-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 114px;
+  gap: 8px;
+}
+
+.category-image {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  background: #fbf5f0;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.category-item.active .category-image {
+  border: 2px solid #ff6b00;
+}
+
+.category-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #25201e;
+  font-weight: 500;
+}
+
+.category-item.active p {
+  font-weight: 700;
+}
+
+/* Results Heading */
+.checkups-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0 16px;
+}
+
+.checkups-heading p {
+  margin: 0;
+  font-size: 14px;
+  color: #777777;
+  font-weight: 600;
+}
+
+.checkups-heading button {
+  border: none;
+  background: transparent;
+  color: #ff6b00;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkups-heading button:hover {
+  color: #e65f00;
+}
+
+/* Checkup Cards Grid */
+.checkup-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Individual Card */
+.checkup-card {
+  min-width: 0;
+  padding: 22px 20px 20px;
+  border: 1px solid #e5ded9;
+  border-radius: 25px;
+  background: linear-gradient(
+    110deg,
+    #ffffff 55%,
+    #fbf5f0 100%
+  );
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.checkup-card:hover {
+  border-color: #ffb47e;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.08);
+}
+
+.checkup-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #25201e;
+  margin: 0 0 40px;
+  min-height: 25px;
+}
+
+/* Checkup Details */
+.checkup-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.detail-icon {
+  color: #c5ad9c;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.detail-item p {
+  color: #777777;
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+.detail-item strong {
+  color: #25201e;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px 10px 18px;
+  border-radius: 50px;
+  background: #f5f5f5;
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.old-price-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.old-price-row del {
+  font-size: 12px;
+  color: #999999;
+}
+
+.offer-tag {
+  background: #d5eee7;
+  color: #00a982;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.current-price {
+  color: #25201e;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Add Button */
+.add-button {
+  min-width: 120px;
+  padding: 11px 20px;
+  border: 1px solid #ff6b00;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #ff6b00;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-button:hover {
+  background: #ff6b00;
+  color: #ffffff;
+}
+
+.add-button:active {
+  transform: scale(0.97);
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .checkup-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .checkups-page {
+    padding: 15px;
+  }
+
+  .category-list {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .category-item {
+    width: 90px;
+  }
+
+  .category-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .checkup-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .checkup-card {
+    padding: 18px 15px;
+  }
+
+  .checkup-card h3 {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .checkup-details {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .detail-item {
+    gap: 6px;
+  }
+
+  .detail-item strong {
+    font-size: 12px;
+  }
+
+  .add-button {
+    min-width: 100px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .checkup-details {
+    flex-wrap: wrap;
+  }
+
+  .price-section {
+    padding: 9px;
+  }
+
+  .add-button {
+    min-width: 85px;
+    padding: 10px;
+  }
+}
