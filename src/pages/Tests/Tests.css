@@ -1,0 +1,501 @@
+
+/* ==============================
+   MAIN TESTS PAGE
+================================ */
+
+.tests-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px 3%;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   CATEGORY SECTION
+================================ */
+
+.categories-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px 5px 25px;
+  background: #ffffff;
+  scrollbar-width: thin;
+  scrollbar-color: #dddddd transparent;
+}
+
+.categories-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.categories-container::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 10px;
+}
+
+/* CATEGORY ITEM */
+
+.category-item {
+  min-width: 100px;
+  flex-shrink: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-3px);
+}
+
+.category-item p {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* CATEGORY CIRCLE */
+
+.category-circle {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* CATEGORY IMAGE */
+
+.category-image {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+}
+
+/* SELECTED CATEGORY BORDER */
+
+.category-item.active .category-circle {
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(
+      135deg,
+      #008f9c,
+      #ed3990,
+      #ff9b35,
+      #8bc34a
+    ) border-box;
+
+  border: 3px solid transparent;
+  box-shadow: 0 3px 12px rgba(0, 143, 156, 0.12);
+}
+
+.category-item.active p {
+  color: #008f9c;
+  font-weight: 700;
+}
+
+/* ==============================
+   RESULTS HEADER
+================================ */
+
+.test-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.test-results-header p {
+  margin: 0;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CLEAR FILTERS */
+
+.clear-filters {
+  margin-left: auto;
+  padding: 6px 0;
+  border: none;
+  background: transparent;
+  color: #008cba;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clear-filters:hover {
+  color: #006b91;
+  text-decoration: underline;
+}
+
+/* ==============================
+   TEST CARDS GRID
+================================ */
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* ==============================
+   TEST CARD - BLUELINEMD BORDER
+================================ */
+
+.test-card {
+  min-width: 0;
+  min-height: 215px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1.5px solid #008f9c;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 3px 9px rgba(0, 143, 156, 0.08);
+  transition: all 0.3s ease;
+}
+
+.test-card:hover {
+  border-color: #ed3990;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 143, 156, 0.15);
+}
+
+/* TEST NAME */
+
+.test-card h3 {
+  color: #252525;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  min-height: 45px;
+}
+
+/* ==============================
+   TEST INFORMATION
+================================ */
+
+.test-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.info-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #009ca6;
+  font-size: 20px;
+}
+
+.info-item > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #252525;
+  font-size: 12px;
+}
+
+.info-label {
+  color: #888888;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.info-item strong {
+  color: #252525;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==============================
+   PRICE SECTION
+================================ */
+
+.test-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 15px;
+  margin-top: auto;
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.price-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.old-price {
+  color: #929292;
+  font-size: 11px;
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background: #e3f6ed;
+  color: #15965a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 7px;
+  border-radius: 4px;
+}
+
+.new-price {
+  color: #222222;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* ==============================
+   ADD BUTTON
+================================ */
+
+.add-button {
+  min-width: 105px;
+  padding: 10px 18px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(
+      135deg,
+      #008f9c,
+      #ed3990,
+      #ff9b35,
+      #8bc34a
+    ) border-box;
+
+  color: #087fc0;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover:not(:disabled) {
+  background:
+    linear-gradient(135deg, #008f9c, #ed3990) padding-box,
+    linear-gradient(
+      135deg,
+      #008f9c,
+      #ed3990,
+      #ff9b35,
+      #8bc34a
+    ) border-box;
+
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+.add-button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* DISABLED BUTTON */
+
+.add-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  background: #eeeeee;
+  color: #888888;
+  border: 2px solid #cccccc;
+}
+
+.add-button:disabled:hover {
+  transform: none;
+  background: #eeeeee;
+  color: #888888;
+}
+
+/* ==============================
+   EMPTY CATEGORY
+================================ */
+
+.empty-category {
+  width: 100%;
+  padding: 45px 20px;
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e9ed;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.empty-category h3 {
+  color: #252525;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.empty-category p {
+  color: #777777;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .test-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .categories-container {
+    gap: 15px;
+  }
+
+  .category-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .category-item {
+    min-width: 90px;
+  }
+}
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .tests-page {
+    padding: 18px 4%;
+  }
+
+  .categories-container {
+    gap: 12px;
+    padding-bottom: 18px;
+  }
+
+  .category-item {
+    min-width: 75px;
+  }
+
+  .category-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .category-item p {
+    font-size: 12px;
+  }
+
+  .test-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .test-card {
+    min-height: 200px;
+    padding: 18px;
+  }
+
+  .test-card h3 {
+    font-size: 15px;
+    min-height: auto;
+  }
+
+  .test-info {
+    gap: 14px;
+  }
+
+  .test-results-header p,
+  .clear-filters {
+    font-size: 13px;
+  }
+
+  .new-price {
+    font-size: 19px;
+  }
+
+  .add-button {
+    min-width: 90px;
+    padding: 9px 14px;
+  }
+}
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+  .test-card {
+    padding: 15px;
+  }
+
+  .test-price-row {
+    gap: 6px;
+  }
+
+  .add-button {
+    min-width: 80px;
+    padding: 9px 11px;
+  }
+
+  .old-price,
+  .discount-badge {
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

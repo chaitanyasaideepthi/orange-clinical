@@ -1,5 +1,8 @@
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+
 import "./Checkups.css";
 import AdditionalInfo from "../AdditionalInfo/AdditionalInfo.jsx";
 import FAQ from "../FAQ/FAQ.jsx";
@@ -10,6 +13,7 @@ import menImg from "../../assets/images/men.png";
 import seniorsImg from "../../assets/images/seniors.jpg";
 import kidsImg from "../../assets/images/kids.png";
 
+// CATEGORIES
 const categories = [
   { name: "Full Body", image: fullBodyImg },
   { name: "Women", image: womenImg },
@@ -18,6 +22,7 @@ const categories = [
   { name: "Kids", image: kidsImg },
 ];
 
+// ALL CHECKUPS
 const checkups = [
   // FULL BODY CHECKUPS
   {
@@ -331,9 +336,12 @@ const checkups = [
 ];
 
 function Checkups() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [addedItems, setAddedItems] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("Full Body");
 
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  // FILTER CHECKUPS
   const filteredCheckups =
     selectedCategory === "All"
       ? checkups
@@ -341,109 +349,147 @@ function Checkups() {
           item.categories.includes(selectedCategory)
         );
 
-  function handleAdd(id) {
-    setAddedItems((prev) =>
-      prev.includes(id)
-        ? prev.filter((item) => item !== id)
-        : [...prev, id]
-    );
+  // ADD TO CART
+  function handleAdd(item) {
+    const cartItem = {
+      ...item,
+      id: `checkup-${item.id}`,
+      name: item.title,
+      price: Number(item.price.replace(/[₹,]/g, "")),
+      category: "Health Checkup",
+    };
+
+    addToCart(cartItem);
+    navigate("/cart");
+  }
+
+  // CLEAR FILTERS
+  function clearFilters() {
+    setSelectedCategory("All");
   }
 
   return (
     <div className="checkups-page">
-      {/* Breadcrumb */}
+
+      {/* BREADCRUMB */}
       <div className="breadcrumb">
         <span>Home</span>
         <span>›</span>
-        <strong>Health Checkups hyderabad</strong>
+        <strong>Health Checkups Hyderabad</strong>
       </div>
 
-      {/* Categories */}
+      {/* CATEGORIES - SAME DESIGN AS TESTS PAGE */}
       <div className="category-list">
         {categories.map((category) => (
           <div
             key={category.name}
             className={`category-item ${
-              selectedCategory === category.name ||
-              (selectedCategory === "All" &&
-                category.name === "Full Body")
-                ? "active"
-                : ""
+              selectedCategory === category.name ? "active" : ""
             }`}
             onClick={() => setSelectedCategory(category.name)}
           >
-            <div className="category-image">
-              <img src={category.image} alt={category.name} />
+            <div className="category-circle">
+              <img
+                src={category.image}
+                alt={category.name}
+                className="category-image"
+              />
             </div>
+
             <p>{category.name}</p>
           </div>
         ))}
       </div>
 
-      {/* Results Heading */}
+      {/* RESULTS HEADING */}
       <div className="checkups-heading">
-        <p>Showing {filteredCheckups.length} checkups</p>
-        <button onClick={() => setSelectedCategory("All")}>
+        <p>
+          Showing <strong>{filteredCheckups.length}</strong> checkup(s)
+        </p>
+
+        <button onClick={clearFilters}>
           Clear filters
         </button>
       </div>
 
-      {/* Checkup Cards */}
+      {/* CHECKUP CARDS */}
       <div className="checkup-cards">
         {filteredCheckups.map((item) => (
           <div className="checkup-card" key={item.id}>
+
+            {/* TITLE */}
             <h3>{item.title}</h3>
 
+            {/* DETAILS */}
             <div className="checkup-details">
+
+              {/* PARAMETERS */}
               <div className="detail-item">
-                <span className="detail-icon">⚕</span>
+                <span className="detail-icon">🧪</span>
+
                 <div>
                   <p>INCLUDES</p>
                   <strong>{item.parameters} Parameters</strong>
                 </div>
               </div>
 
+              {/* REPORT TIME */}
               <div className="detail-item">
-                <span className="detail-icon">▤</span>
+                <span className="detail-icon">🕒</span>
+
                 <div>
                   <p>REPORTS WITHIN</p>
                   <strong>{item.reports}</strong>
                 </div>
               </div>
+
             </div>
 
-            {/* Price Section */}
+            {/* PRICE SECTION */}
             <div className="price-section">
+
               <div className="price-details">
+
                 <div className="old-price-row">
-                  {item.oldPrice && <del>{item.oldPrice}</del>}
+                  {item.oldPrice && (
+                    <del>{item.oldPrice}</del>
+                  )}
 
                   {item.offer && (
-                    <span className="offer-tag">{item.offer}</span>
+                    <span className="offer-tag">
+                      {item.offer}
+                    </span>
                   )}
                 </div>
 
                 <strong className="current-price">
                   {item.price}
                 </strong>
+
               </div>
 
+              {/* ADD BUTTON */}
               <button
                 className="add-button"
-                onClick={() => handleAdd(item.id)}
+                onClick={() => handleAdd(item)}
               >
-                {addedItems.includes(item.id) ? "✓ Added" : "+ Add"}
+                <span>+</span> Add
               </button>
+
             </div>
           </div>
         ))}
       </div>
-        <AdditionalInfo />
-         <FAQ />
+
+      {/* ADDITIONAL INFORMATION */}
+      <AdditionalInfo />
+
+      {/* FAQ */}
+      <FAQ />
+
     </div>
   );
 }
 
 export default Checkups;
-
 
