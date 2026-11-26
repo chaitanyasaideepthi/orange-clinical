@@ -3,7 +3,7 @@
    MAIN TESTS PAGE
 ================================ */
 
-.tests-page {
+.Tests-page {
   width: 100%;
   min-height: 100vh;
   padding: 25px 3%;
@@ -110,7 +110,7 @@
    RESULTS HEADER
 ================================ */
 
-.test-results-header {
+.Test-results-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,7 +120,7 @@
   border-bottom: 1px solid #eeeeee;
 }
 
-.test-results-header p {
+.Test-results-header p {
   margin: 0;
   color: #777777;
   font-size: 14px;
@@ -150,7 +150,7 @@
    TEST CARDS GRID
 ================================ */
 
-.test-grid {
+.Test-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
@@ -161,7 +161,7 @@
    TEST CARD - BLUELINEMD BORDER
 ================================ */
 
-.test-card {
+.Test-card {
   min-width: 0;
   min-height: 215px;
   padding: 20px;
@@ -176,7 +176,7 @@
   transition: all 0.3s ease;
 }
 
-.test-card:hover {
+.Test-card:hover {
   border-color: #ed3990;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 143, 156, 0.15);
@@ -184,7 +184,7 @@
 
 /* TEST NAME */
 
-.test-card h3 {
+.Test-card h3 {
   color: #252525;
   font-size: 16px;
   font-weight: 700;
@@ -197,7 +197,7 @@
    TEST INFORMATION
 ================================ */
 
-.test-info {
+.Test-info {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -247,7 +247,7 @@
    PRICE SECTION
 ================================ */
 
-.test-price-row {
+.Test-price-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -409,7 +409,7 @@
 ================================ */
 
 @media (max-width: 600px) {
-  .tests-page {
+  .Tests-page {
     padding: 18px 4%;
   }
 
@@ -431,22 +431,22 @@
     font-size: 12px;
   }
 
-  .test-grid {
+  .Test-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
 
-  .test-card {
+  .Test-card {
     min-height: 200px;
     padding: 18px;
   }
 
-  .test-card h3 {
+  .Test-card h3 {
     font-size: 15px;
     min-height: auto;
   }
 
-  .test-info {
+  .Test-info {
     gap: 14px;
   }
 
@@ -470,11 +470,11 @@
 ================================ */
 
 @media (max-width: 380px) {
-  .test-card {
+  .Test-card {
     padding: 15px;
   }
 
-  .test-price-row {
+  .Test-price-row {
     gap: 6px;
   }
 
