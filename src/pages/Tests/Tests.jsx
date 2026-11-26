@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
-import "./tests.css";
+import "./Tests.css";
 
 import AdditionalInfo from "../AdditionalInfo/AdditionalInfo.jsx";
 import FAQ from "../FAQ/FAQ.jsx";
