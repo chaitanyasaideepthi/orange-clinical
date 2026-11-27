@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import "./MyAccount.css";
+import "./Myaccount.css";
 
 import logo from "../../assets/images/MD logo.png";
 

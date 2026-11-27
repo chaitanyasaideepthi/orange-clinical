@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
 import { testData } from "../../Data/testsData.js";
-import { checkups } from "../../data/checkupsData.js";
+import { checkups } from "../../Data/checkupsData.js";
 
 import "./SearchForm.css";
 
