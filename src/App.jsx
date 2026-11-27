@@ -8,6 +8,7 @@ import Footerlinks from "./components/Footerlinks/Footerlinks.jsx";
 import Checkups from "./pages/Checkups/Checkups.jsx";
 import Tests from "./pages/Tests/Tests.jsx";
 import Cart from "./pages/Cart/Cart.jsx";
+import MyAccount from "./pages/MyAccount/MyAccount.jsx";
 
 import { CartProvider } from "./context/CartContext";
 
@@ -17,10 +18,32 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/checks" replace />} />
-        <Route path="/checks" element={<Checkups />} />
-        <Route path="/tests" element={<Tests />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/"
+          element={<Navigate to="/checks" replace />}
+        />
+
+        <Route
+          path="/checks"
+          element={<Checkups />}
+        />
+
+        <Route
+          path="/tests"
+          element={<Tests />}
+        />
+
+        <Route
+          path="/cart"
+          element={<Cart />}
+        />
+
+        {/* My Account */}
+        <Route
+          path="/my-account"
+          element={<MyAccount />}
+        />
+
       </Routes>
 
       <Footerlinks />
@@ -30,5 +53,6 @@ function App() {
 }
 
 export default App;
+
 
 

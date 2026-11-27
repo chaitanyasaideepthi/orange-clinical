@@ -1,0 +1,149 @@
+
+/* =================================
+   ACCOUNT MENU SECTION
+================================= */
+
+.account-menu-section {
+  width: 100%;
+  margin-top: 25px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* SECTION TITLE */
+
+.account-menu-section h3 {
+  margin: 0 0 15px;
+  color: #252525;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* MENU LIST */
+
+.account-menu-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MENU ITEM */
+
+.account-menu-item {
+  width: 100%;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 8px;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.account-menu-item:hover {
+  background: #fff8f3;
+}
+
+/* MENU ICON */
+
+.account-menu-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff1e7;
+  color: #f47721;
+  font-size: 21px;
+}
+
+/* MENU CONTENT */
+
+.account-menu-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.account-menu-content h4 {
+  margin: 0 0 6px;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.account-menu-content p {
+  margin: 0;
+  color: #888888;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* RIGHT ARROW */
+
+.account-menu-arrow {
+  color: #999999;
+  font-size: 27px;
+  font-weight: 300;
+  padding: 0 8px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.account-menu-item:hover .account-menu-arrow {
+  color: #f47721;
+  transform: translateX(3px);
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .account-menu-section {
+    margin-top: 20px;
+  }
+
+  .account-menu-item {
+    min-height: 74px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+  .account-menu-section h3 {
+    font-size: 17px;
+  }
+
+  .account-menu-item {
+    min-height: 70px;
+    gap: 11px;
+    padding: 10px 4px;
+  }
+
+  .account-menu-icon {
+    width: 39px;
+    height: 39px;
+    font-size: 19px;
+  }
+
+  .account-menu-content h4 {
+    font-size: 14px;
+  }
+
+  .account-menu-content p {
+    font-size: 11px;
+  }
+
+  .account-menu-arrow {
+    font-size: 24px;
+  }
+}

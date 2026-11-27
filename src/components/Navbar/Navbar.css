@@ -1,5 +1,8 @@
 
-/* Main Navbar */
+/* ==============================
+   MAIN NAVBAR
+================================ */
+
 .navbar {
   width: 100%;
   height: 90px;
@@ -13,7 +16,10 @@
   box-sizing: border-box;
 }
 
-/* Logo and Location */
+/* ==============================
+   LOGO AND LOCATION
+================================ */
+
 .nav-location {
   display: flex;
   align-items: center;
@@ -53,7 +59,10 @@
   color: #555555;
 }
 
-/* Search Bar */
+/* ==============================
+   SEARCH BAR
+================================ */
+
 .nav-search {
   position: relative;
   flex: 1;
@@ -79,14 +88,11 @@
 }
 
 .nav-search input:focus {
-  border-color: black;
-}
-
-.nav-search input::placeholder {
-  color: #999999;
+  border-color: #008F9C;
 }
 
 /* Search Placeholder */
+
 .search-placeholder {
   position: absolute;
   top: 50%;
@@ -97,21 +103,24 @@
   white-space: nowrap;
 }
 
-/* Search for - Black */
 .orange-text {
-  color: #000000;
+  color: #222222;
   font-weight: 500;
 }
 
-/* Animated words - Orange */
 .animated-text {
-  color: #f47721;
+  color: #008F9C;
   display: inline-block;
-  border-right: 2px solid #f47721;
+  border-right: 2px solid #2875ff;
   animation: blinkCursor 0.7s step-end infinite;
 }
 
+.typing-cursor {
+  display: none;
+}
+
 /* Cursor Animation */
+
 @keyframes blinkCursor {
   50% {
     border-color: transparent;
@@ -119,16 +128,20 @@
 }
 
 /* Search Icon */
+
 .search-icon {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: black;
+  color: #008F9C;
   pointer-events: none;
 }
 
-/* Tests and Checkups */
+/* ==============================
+   NAVIGATION LINKS
+================================ */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -141,16 +154,22 @@
   color: rgba(0, 0, 0, 0.482);
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
-/* Active Link */
+.nav-links a:hover {
+  color: #008F9C;
+}
+
 .nav-links a.active {
-  color: #000000;
+  color: #008F9C;
   font-weight: 600;
 }
 
-/* Cart and Profile */
+/* ==============================
+   CART AND ACCOUNT BUTTONS
+================================ */
+
 .nav-icon-btn {
   width: 42px;
   height: 42px;
@@ -159,14 +178,42 @@
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background-color: #f5f5f5;
-  color: #333333;
+  background-color: #eef4ff;
+  color: #008F9C;
   cursor: pointer;
   flex-shrink: 0;
-  transition: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsive - Tablet */
+.nav-icon-btn:hover {
+  background-color: #e2ecff;
+}
+
+.nav-icon-btn svg {
+  width: 23px;
+  height: 23px;
+}
+
+/* My Account Profile Icon */
+
+.my-account-btn {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #eef4ff;
+  color: #008F9C;
+}
+
+.my-account-btn:hover {
+  background-color: #e2ecff;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+================================ */
+
 @media (max-width: 1100px) {
   .navbar {
     padding: 0 20px;
@@ -186,7 +233,10 @@
   }
 }
 
-/* Responsive - Mobile */
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+
 @media (max-width: 800px) {
   .navbar {
     flex-wrap: wrap;
@@ -214,7 +264,10 @@
   }
 }
 
-/* Small Mobile */
+/* ==============================
+   SMALL MOBILE
+================================ */
+
 @media (max-width: 500px) {
   .navbar {
     padding: 12px;
@@ -222,7 +275,7 @@
   }
 
   .nav-logo {
-    width: 55px;
+    width: 50px;
   }
 
   .location-city {
@@ -244,5 +297,24 @@
   .nav-icon-btn {
     width: 36px;
     height: 36px;
+  }
+
+  .nav-icon-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .my-account-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-search input {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .search-placeholder {
+    font-size: 14px;
   }
 }

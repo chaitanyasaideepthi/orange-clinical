@@ -1,11 +1,15 @@
+
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+
 import logo from "../../assets/images/logo.png";
 import LocationModal from "../LocationModal/LocationModal.jsx";
 import SearchForm from "../SearchForm/SearchForm.jsx";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   const [showLocation, setShowLocation] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState("Bengaluru");
@@ -50,7 +54,7 @@ function Navbar() {
         >
           <img
             src={logo}
-            alt="Orange Health"
+            alt="MD Logo"
             className="nav-logo"
           />
 
@@ -96,14 +100,18 @@ function Navbar() {
           </svg>
         </div>
 
-        {/* Tests and Checkups Navigation */}
+        {/* Tests and Checkups */}
         <div className="nav-links">
           <NavLink to="/tests">Tests</NavLink>
           <NavLink to="/checks">Checkups</NavLink>
         </div>
 
         {/* Cart */}
-        <button className="nav-icon-btn" aria-label="Cart">
+        <button
+          className="nav-icon-btn"
+          aria-label="Cart"
+          onClick={() => navigate("/cart")}
+        >
           <svg
             viewBox="0 0 24 24"
             width="23"
@@ -120,8 +128,13 @@ function Navbar() {
           </svg>
         </button>
 
-        {/* Profile */}
-        <button className="nav-icon-btn" aria-label="Profile">
+        {/* My Account - Profile Icon */}
+        <button
+          className="nav-icon-btn my-account-btn"
+          aria-label="My Account"
+          title="My Account"
+          onClick={() => navigate("/my-account")}
+        >
           <svg
             viewBox="0 0 24 24"
             width="23"
@@ -158,3 +171,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

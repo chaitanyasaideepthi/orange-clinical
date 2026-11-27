@@ -1,3 +1,4 @@
+
 /* ==============================
    BLUELINEMD COLORS
 ================================ */
@@ -77,7 +78,7 @@
 }
 
 .category-item {
-  min-width: 125px;
+  min-width: 75px;
   flex-shrink: 0;
   text-align: center;
   cursor: pointer;
@@ -89,29 +90,33 @@
 ================================ */
 
 .category-circle {
-  width: 145px;
-  height: 145px;
-  margin: 0 auto 12px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
   padding: 3px;
   border-radius: 50%;
   box-sizing: border-box;
   overflow: hidden;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
     var(--bluelinemd-gradient) border-box;
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   transition: 0.3s ease;
 }
 
-/* CATEGORY IMAGE */
+/* COMPLETE IMAGE - NO CUTTING */
 
 .category-image {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: 50%;
 }
@@ -123,13 +128,13 @@
     linear-gradient(#ffffff, #ffffff) padding-box,
     var(--bluelinemd-gradient) border-box;
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 143, 156, 0.15);
 }
 
 .category-item p {
   margin: 0;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   color: #444;
 }
@@ -184,7 +189,6 @@
 
 /* ==============================
    CHECKUP CARD
-   SAME TESTS BLUE BORDER
 ================================ */
 
 .checkup-card {
@@ -312,7 +316,6 @@
 
 /* ==============================
    ADD BUTTON
-   BLUELINEMD GRADIENT BORDER
 ================================ */
 
 .add-button {
@@ -358,7 +361,6 @@
 ================================ */
 
 @media (max-width: 992px) {
-
   .checkup-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -368,12 +370,12 @@
   }
 
   .category-item {
-    min-width: 115px;
+    min-width: 75px;
   }
 
   .category-circle {
-    width: 115px;
-    height: 115px;
+    width: 60px;
+    height: 60px;
   }
 
   .checkup-card {
@@ -386,7 +388,6 @@
 ================================ */
 
 @media (max-width: 600px) {
-
   .checkups-page {
     padding: 15px;
   }
@@ -400,16 +401,16 @@
   }
 
   .category-item {
-    min-width: 95px;
+    min-width: 65px;
   }
 
   .category-circle {
-    width: 95px;
-    height: 95px;
+    width: 60px;
+    height: 60px;
   }
 
   .category-item p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .checkup-cards {

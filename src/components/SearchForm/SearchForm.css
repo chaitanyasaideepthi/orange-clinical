@@ -1,83 +1,125 @@
 
-/* Search Overlay */
-.search-overlay {
+/* ==============================
+   MAIN CONTAINER
+================================ */
+
+.search-form-container {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(4px);
+  z-index: 9999;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  padding: 16px;
-  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* Search Popup */
-.search-popup {
-  width: 100%;
-  max-width: 450px;
-  height: 480px;
+/* ==============================
+   BLURRED BACKGROUND
+================================ */
+
+.search-form-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* ==============================
+   POPUP
+================================ */
+
+.search-form-popup {
+  position: relative;
+  z-index: 2;
+  width: 415px;
+  max-width: 100%;
+  height: 470px;
+  max-height: 90vh;
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 25px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Search Bar */
-.popup-search-bar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* ==============================
+   SEARCH INPUT
+================================ */
+
+.search-form-box {
+  width: 100%;
   height: 56px;
   min-height: 56px;
-  border: 1px rgba(0, 0, 255, 0.719);
+  border: 1px solid #008f9c;
   border-radius: 35px;
-  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  box-sizing: border-box;
   background: #ffffff;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 5px 15px rgba(40, 117, 255, 0.10);
 }
 
-.back-button {
+.search-form-back {
   border: none;
-  background: none;
-  font-size: 23px;
-  color: #666666;
+  background: transparent;
+  font-size: 30px;
+  line-height: 1;
+  color: #008F9C;
   cursor: pointer;
+  padding: 0 10px 3px 0;
 }
 
-.popup-search-bar input {
+.search-form-input {
   flex: 1;
   min-width: 0;
+  height: 100%;
   border: none;
   outline: none;
-  font-size: 15px;
   background: transparent;
-  color: #333333;
+  font-size: 15px;
+  color: #222222;
 }
 
-.popup-search-bar input::placeholder {
+.search-form-input::placeholder {
   color: #999999;
   opacity: 1;
 }
 
-/* Categories */
-.search-tabs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  margin-top: 20px;
-  padding: 4px;
-  background: #eeeeee;
-  border-radius: 30px;
+.search-form-clear {
+  border: none;
+  background: transparent;
+  font-size: 23px;
+  color: #2875ff;
+  cursor: pointer;
 }
 
-.search-tabs button {
+/* ==============================
+   TABS
+================================ */
+
+.search-form-tabs {
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  background: #eeeeee;
+  border-radius: 30px;
+  padding: 4px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.search-form-tab {
   flex: 1;
-  height: 36px;
+  height: 32px;
   border: none;
   border-radius: 25px;
   background: transparent;
@@ -85,26 +127,304 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.search-tabs button.active-tab {
+.search-form-tab.active {
+  background: #008F9C;
+  color: #ffffff;
+}
+
+/* ==============================
+   SECTION HEADING
+================================ */
+
+.search-form-heading {
+  margin-top: 18px;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.search-form-heading h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+}
+
+/* ==============================
+   RESULTS SCROLL
+================================ */
+
+.search-form-results {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #008F9C transparent;
+}
+
+.search-form-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-form-results::-webkit-scrollbar-thumb {
+  background:#008F9C;
+  border-radius: 10px;
+}
+
+.search-form-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ==============================
+   RESULT CARD
+================================ */
+
+.search-form-card {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
   background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.search-form-card:hover {
+  border-color: #b8d0ff;
+}
+
+.search-form-card-content h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
   color: #111111;
 }
 
-/* Heading */
-.frequently-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: #444444;
-  margin: 18px 8px 12px;
+.search-form-report {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #555555;
 }
 
-/* Content */
-.search-content {
-  flex: 1;
-  overflow-y: auto;
-  color: #777777;
-  font-size: 14px;
-  padding: 8px;
+.search-form-category {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666666;
 }
+
+.search-form-details {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.search-form-type {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #008F9C;
+  background: #eef4ff;
+  padding: 4px 9px;
+  border-radius: 12px;
+}
+
+/* ==============================
+   CARD PRICE AND ADD BUTTON
+================================ */
+
+.search-form-card-bottom {
+  margin-top: 16px;
+  padding: 10px 0 0;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-form-price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Original Price and Offer */
+
+.search-form-offer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 16px;
+}
+
+.search-form-old-price {
+  color: #999999;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.search-form-discount {
+  color:#008F9C;
+  background: #e8f0ff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+/* Actual Offer Price */
+
+.search-form-price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222222;
+}
+
+/* ==============================
+   ADD BUTTON
+================================ */
+
+.search-form-add-btn {
+  min-width: 105px;
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid #008F9C;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #008F9C;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(40, 117, 255, 0.08);
+  transition: 0.2s ease;
+}
+
+.search-form-add-btn:hover {
+  background: #008F9C;
+  color: #ffffff;
+}
+
+.search-form-add-btn.added {
+  color: #16865c;
+  background: #e8f8f0;
+  border-color: #b8e8d0;
+}
+
+/* ==============================
+   EMPTY RESULTS
+================================ */
+
+.search-form-empty {
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.search-form-empty h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.search-form-empty p {
+  margin: 0;
+  font-size: 13px;
+  color: #888888;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+.search-form-footer {
+  flex-shrink: 0;
+  min-height: 38px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #eeeeee;
+  background: #ffffff;
+}
+
+.search-form-footer p {
+  margin: 0;
+  color: #777777;
+  font-size: 12px;
+}
+
+/* Proceed Button */
+
+.search-form-proceed-btn {
+  border: none;
+  border-radius: 22px;
+  padding: 10px 20px;
+  background: #008F9C;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-form-proceed-btn:hover {
+  background: #008F9C;
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 500px) {
+  .search-form-container {
+    padding: 12px;
+  }
+
+  .search-form-popup {
+    width: 100%;
+    height: 75vh;
+    max-height: 85vh;
+    border-radius: 22px;
+    padding: 14px;
+  }
+
+  .search-form-box {
+    height: 50px;
+    min-height: 50px;
+  }
+
+  .search-form-input {
+    font-size: 14px;
+  }
+
+  .search-form-tab {
+    font-size: 13px;
+  }
+
+  .search-form-heading h3 {
+    font-size: 14px;
+  }
+
+  .search-form-card {
+    padding: 16px;
+  }
+
+  .search-form-card-content h4 {
+    font-size: 15px;
+  }
+
+  .search-form-add-btn {
+    min-width: 85px;
+    height: 38px;
+    font-size: 14px;
+  }
+}
+
+

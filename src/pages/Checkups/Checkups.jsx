@@ -22,8 +22,8 @@ const categories = [
   { name: "Kids", image: kidsImg },
 ];
 
-// ALL CHECKUPS
-const checkups = [
+// ALL CHECKUPS - EXPORT FOR SEARCHFORM
+export const checkups = [
   // FULL BODY CHECKUPS
   {
     id: 1,
@@ -370,7 +370,6 @@ function Checkups() {
 
   return (
     <div className="checkups-page">
-
       {/* BREADCRUMB */}
       <div className="breadcrumb">
         <span>Home</span>
@@ -378,7 +377,7 @@ function Checkups() {
         <strong>Health Checkups Hyderabad</strong>
       </div>
 
-      {/* CATEGORIES - SAME DESIGN AS TESTS PAGE */}
+      {/* CATEGORIES */}
       <div className="category-list">
         {categories.map((category) => (
           <div
@@ -395,7 +394,6 @@ function Checkups() {
                 className="category-image"
               />
             </div>
-
             <p>{category.name}</p>
           </div>
         ))}
@@ -416,17 +414,14 @@ function Checkups() {
       <div className="checkup-cards">
         {filteredCheckups.map((item) => (
           <div className="checkup-card" key={item.id}>
-
             {/* TITLE */}
             <h3>{item.title}</h3>
 
             {/* DETAILS */}
             <div className="checkup-details">
-
               {/* PARAMETERS */}
               <div className="detail-item">
                 <span className="detail-icon">🧪</span>
-
                 <div>
                   <p>INCLUDES</p>
                   <strong>{item.parameters} Parameters</strong>
@@ -436,24 +431,18 @@ function Checkups() {
               {/* REPORT TIME */}
               <div className="detail-item">
                 <span className="detail-icon">🕒</span>
-
                 <div>
                   <p>REPORTS WITHIN</p>
                   <strong>{item.reports}</strong>
                 </div>
               </div>
-
             </div>
 
             {/* PRICE SECTION */}
             <div className="price-section">
-
               <div className="price-details">
-
                 <div className="old-price-row">
-                  {item.oldPrice && (
-                    <del>{item.oldPrice}</del>
-                  )}
+                  {item.oldPrice && <del>{item.oldPrice}</del>}
 
                   {item.offer && (
                     <span className="offer-tag">
@@ -465,7 +454,6 @@ function Checkups() {
                 <strong className="current-price">
                   {item.price}
                 </strong>
-
               </div>
 
               {/* ADD BUTTON */}
@@ -475,7 +463,6 @@ function Checkups() {
               >
                 <span>+</span> Add
               </button>
-
             </div>
           </div>
         ))}
@@ -486,10 +473,10 @@ function Checkups() {
 
       {/* FAQ */}
       <FAQ />
-
     </div>
   );
 }
 
 export default Checkups;
+
 

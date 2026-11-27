@@ -1,5 +1,4 @@
 
-
 /* ==============================
    BLUELINEMD COLORS
 ================================ */
@@ -41,7 +40,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 30px;
+  gap: 15px;
 
   width: 100%;
   flex-wrap: nowrap;
@@ -49,7 +48,7 @@
   overflow-x: auto;
   overflow-y: hidden;
 
-  padding: 10px 5px 20px;
+  padding: 10px 5px 15px;
   margin-bottom: 15px;
 
   background: #ffffff;
@@ -60,7 +59,7 @@
 }
 
 .categories-container::-webkit-scrollbar {
-  height: 6px;
+  height: 5px;
 }
 
 .categories-container::-webkit-scrollbar-thumb {
@@ -75,11 +74,11 @@
 /* CATEGORY ITEM */
 
 .category-item {
-  width: 145px;
-  min-width: 145px;
-  max-width: 145px;
+  width: 75px;
+  min-width: 75px;
+  max-width: 75px;
 
-  flex: 0 0 145px;
+  flex: 0 0 75px;
 
   display: flex;
   flex-direction: column;
@@ -92,17 +91,17 @@
 }
 
 .category-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 /* CATEGORY CIRCLE */
 
 .category-circle {
-  width: 145px;
-  height: 145px;
+  width: 60px;
+  height: 60px;
 
-  margin: 0 auto 12px;
-  padding: 3px;
+  margin: 0 auto 8px;
+  padding: 2px;
 
   border-radius: 50%;
   overflow: hidden;
@@ -113,7 +112,7 @@
     linear-gradient(#ffffff, #ffffff) padding-box,
     var(--bluelinemd-gradient) border-box;
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
 
   display: flex;
   align-items: center;
@@ -143,9 +142,9 @@
     linear-gradient(#ffffff, #ffffff) padding-box,
     var(--bluelinemd-gradient) border-box;
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
 
-  box-shadow: 0 4px 12px rgba(0, 143, 156, 0.15);
+  box-shadow: 0 3px 8px rgba(0, 143, 156, 0.15);
 }
 
 /* CATEGORY NAME */
@@ -153,8 +152,9 @@
 .category-item p {
   margin: 0;
   color: #333333;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 .category-item.active p {
@@ -206,7 +206,6 @@
   font-weight: 700;
 
   cursor: pointer;
-  transition: none;
 }
 
 .clear-filters:hover {
@@ -410,11 +409,7 @@
 
   cursor: pointer;
   white-space: nowrap;
-
-  transition: none;
 }
-
-/* PLUS SYMBOL */
 
 .add-button span {
   color: var(--bluelinemd-pink);
@@ -422,8 +417,6 @@
   font-size: 17px;
   font-weight: 800;
 }
-
-/* NO HOVER CHANGE */
 
 .add-button:hover {
   background:
@@ -482,21 +475,20 @@
   }
 
   .categories-container {
-    gap: 25px;
-    flex-wrap: nowrap;
+    gap: 12px;
   }
 
   .category-item {
-    width: 115px;
-    min-width: 115px;
-    max-width: 115px;
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
 
-    flex: 0 0 115px;
+    flex: 0 0 70px;
   }
 
   .category-circle {
-    width: 115px;
-    height: 115px;
+    width: 55px;
+    height: 55px;
   }
 
   .test-card {
@@ -520,29 +512,29 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
-    gap: 15px;
+    gap: 10px;
 
     overflow-x: auto;
     overflow-y: hidden;
 
-    padding: 10px 5px 18px;
+    padding: 8px 5px 15px;
   }
 
   .category-item {
-    width: 95px;
-    min-width: 95px;
-    max-width: 95px;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
 
-    flex: 0 0 95px;
+    flex: 0 0 60px;
   }
 
   .category-circle {
-    width: 95px;
-    height: 95px;
+    width: 50px;
+    height: 50px;
   }
 
   .category-item p {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   /* RESULTS HEADER */
@@ -637,18 +629,20 @@
   }
 
   .category-item {
-    width: 85px;
-    min-width: 85px;
-    max-width: 85px;
+    width: 55px;
+    min-width: 55px;
+    max-width: 55px;
 
-    flex: 0 0 85px;
+    flex: 0 0 55px;
   }
 
   .category-circle {
-    width: 85px;
-    height: 85px;
+    width: 45px;
+    height: 45px;
   }
 }
+
+
 
 
 

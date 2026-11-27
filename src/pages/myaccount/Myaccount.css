@@ -1,0 +1,250 @@
+
+/* MAIN PAGE */
+
+.my-account-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f7f8fa;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.my-account-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* PROFILE HEADER */
+
+.account-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.profile-avatar {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef4ff;
+  color: #2875ff;
+  font-size: 25px;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.profile-info h2 {
+  margin: 0 0 5px;
+  color: #222222;
+  font-size: 20px;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #888888;
+  font-size: 14px;
+}
+
+/* SECTION */
+
+.account-section {
+  margin-top: 25px;
+}
+
+.account-section h3,
+.account-help h3 {
+  margin: 0 0 12px;
+  color: #333333;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ACCOUNT MENU */
+
+.account-menu {
+  width: 100%;
+}
+
+.account-menu-item,
+.account-help-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 75px;
+  padding: 12px 5px;
+  border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.account-menu-item:hover,
+.account-help-link:hover {
+  background: #f5f8ff;
+}
+
+/* ICON */
+
+.account-menu-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eef4ff;
+  font-size: 21px;
+}
+
+/* CONTENT */
+
+.account-menu-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.account-menu-content h4 {
+  margin: 0 0 6px;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.account-menu-content p {
+  margin: 0;
+  color: #888888;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* RIGHT ARROW */
+
+.account-arrow {
+  color: #2875ff;
+  font-size: 25px;
+  padding: 0 8px;
+}
+
+/* HELP */
+
+.account-help {
+  margin-top: 30px;
+}
+
+.account-help-link {
+  border-bottom: none;
+}
+
+/* FOOTER */
+
+.account-footer {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+
+.account-legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.account-legal-links a {
+  color: #555555;
+  text-decoration: none;
+}
+
+.account-legal-links a:hover {
+  color: #2875ff;
+}
+
+.account-legal-links span {
+  color: #aaaaaa;
+}
+
+/* LOGOUT */
+
+.account-logout {
+  margin-top: 22px;
+  padding: 10px 25px;
+  border: 1px solid #2875ff;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #2875ff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.account-logout:hover {
+  background: #eef4ff;
+  border-color: #2875ff;
+  color: #2875ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .my-account-page {
+    padding: 15px 10px;
+  }
+
+  .my-account-container {
+    padding: 18px 14px;
+  }
+
+  .profile-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .profile-info h2 {
+    font-size: 18px;
+  }
+
+  .account-menu-item,
+  .account-help-link {
+    gap: 10px;
+    min-height: 70px;
+  }
+
+  .account-menu-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+  }
+
+  .account-menu-content h4 {
+    font-size: 14px;
+  }
+
+  .account-menu-content p {
+    font-size: 11px;
+  }
+}

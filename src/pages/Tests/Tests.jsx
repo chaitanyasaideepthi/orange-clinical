@@ -186,7 +186,7 @@ const hormonalTests = [
 ];
 
 // ALL CATEGORY DATA
-const testData = {
+export const testData = {
   Blood: bloodTests,
   Vitamins: vitaminTests,
   Heart: heartTests,
