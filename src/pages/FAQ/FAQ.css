@@ -1,117 +1,181 @@
+/* ==============================
+   FAQ SECTION
+============================== */
 
-/* Main FAQ section */
 .faq-page {
   width: 100%;
-  padding: 50px 3%;
   background: #ffffff;
+  padding: 70px 5%;
+  font-family: Arial, sans-serif;
   box-sizing: border-box;
-  border-top: 1px solid #d6d6d6;
 }
 
-/* Left and right layout */
+/* Main Layout */
 .faq-layout {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: 27% minmax(0, 1fr);
-  gap: 25px;
+  grid-template-columns: 30% 70%;
+  gap: 50px;
   align-items: start;
 }
 
-/* Left FAQ heading */
+/* ==============================
+   LEFT FAQ HEADING
+============================== */
+
 .faq-title {
-  padding: 12px 5px;
+  position: sticky;
+  top: 100px;
 }
 
 .faq-title span {
-  display: block;
-  color: #000000;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 8px;
+  letter-spacing: 2px;
+  color: #008f9c;
 }
 
 .faq-title h2 {
-  margin: 0;
-  color: #008F9C;
-  font-size: 26px;
+  font-size: 42px;
   font-weight: 700;
+  color: #164e7a;
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
-/* FAQ items */
+/* ==============================
+   FAQ CONTENT
+============================== */
+
 .faq-content {
   width: 100%;
 }
 
+/* FAQ Item */
 .faq-item {
-  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+  border-bottom: 1px solid #e3e8ed;
+  margin-bottom: 5px;
 }
 
-/* FAQ question button */
+/* Question Button */
 .faq-question {
   width: 100%;
-  min-height: 56px;
-  padding: 15px 5px;
+  background: transparent;
+  border: none;
+  outline: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  border: none;
-  border-radius: 0;
-  background: #ffffff;
-  color: #000000;
-  font-size: 17px;
-  font-weight: 700;
   text-align: left;
+  gap: 20px;
+  padding: 22px 10px;
   cursor: pointer;
-  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #263746;
+  transition: color 0.3s ease;
 }
 
-/* No hover effect */
+/* Hover */
 .faq-question:hover {
-  background: #ffffff;
-  color: #000000;
+  color: #008f9c;
 }
 
 /* Arrow */
 .faq-arrow {
-  color: #000000;
-  font-size: 22px;
-  flex-shrink: 0;
+  font-size: 25px;
+  color: #008f9c;
+  min-width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-/* FAQ answer - light black */
+/* ==============================
+   FAQ ANSWER
+============================== */
+
 .faq-answer {
-  padding: 10px 5px 20px;
-  color: #666666;
-  font-size: 14px;
-  font-weight: 400;
+  padding: 0 10px 22px;
+  font-size: 15px;
   line-height: 1.8;
+  color: #5b6672;
+  animation: faqOpen 0.3s ease;
 }
 
-.faq-answer strong {
-  color: #666666;
-  font-weight: 400;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .faq-page {
-    padding: 25px 4%;
+/* Smooth opening effect */
+@keyframes faqOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
   }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
   .faq-layout {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 30px;
+  }
+
+  .faq-title {
+    position: static;
   }
 
   .faq-title h2 {
-    font-size: 23px;
+    font-size: 35px;
   }
 
   .faq-question {
     font-size: 15px;
   }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+  .faq-page {
+    padding: 40px 20px;
+  }
+
+  .faq-layout {
+    gap: 25px;
+  }
+
+  .faq-title span {
+    font-size: 12px;
+  }
+
+  .faq-title h2 {
+    font-size: 30px;
+  }
+
+  .faq-question {
+    padding: 18px 5px;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .faq-arrow {
+    font-size: 22px;
+  }
 
   .faq-answer {
+    padding: 0 5px 18px;
     font-size: 13px;
+    line-height: 1.8;
   }
 }

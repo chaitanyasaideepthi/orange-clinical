@@ -9,71 +9,29 @@ function Footerlinks() {
         <div className="footer-column">
           <h3>Company</h3>
 
-          <a href="https://www.orangehealth.in/about" target="_blank" rel="noreferrer">
-            About Us
-          </a>
-
-          <a href="https://www.orangehealth.in/stores" target="_blank" rel="noreferrer">
-            Centres
-          </a>
-
-          <a href="https://www.orangehealth.in/jobs" target="_blank" rel="noreferrer">
-            Careers
-          </a>
-
-          <a href="https://www.orangehealth.in/emedic-career" target="_blank" rel="noreferrer">
-            Emedic Career
-          </a>
-
-          <a href="https://www.orangehealth.in/blog" target="_blank" rel="noreferrer">
-            Blogs
-          </a>
-
-          <a href="https://www.orangehealth.in/contact" target="_blank" rel="noreferrer">
-            Contact Us
-          </a>
+          <a href="https://bluelinemd.com/">Home</a>
+          <a href="https://bluelinemd.com/features">Features</a>
+          <a href="https://bluelinemd.com/pricing">Pricing</a>
+          <a href="https://bluelinemd.com/testimonials">Testimonials</a>
+          <a href="https://bluelinemd.com/about">About</a>
+          <a href="https://bluelinemd.com/contact">Contact</a>
         </div>
 
         {/* Partners */}
         <div className="footer-column">
           <h3>Partners</h3>
 
-          <a href="https://www.orangehealth.in/doctors" target="_blank" rel="noreferrer">
-            For Doctors
-          </a>
-
-          <a href="https://www.orangehealth.in/corporate-partners" target="_blank" rel="noreferrer">
-            For Corporates
-          </a>
-
-          <a href="https://www.orangehealth.in/rent-your-property" target="_blank" rel="noreferrer">
-            Rent Your Property
-          </a>
+          <a href="https://bluelinemd.com/features">Platform</a>
+          <a href="https://bluelinemd.com/">Services</a>
+          <a href="https://bluelinemd.com/">Specialties</a>
         </div>
 
         {/* Policy */}
         <div className="footer-column">
           <h3>Policy</h3>
 
-          <a href="https://www.orangehealth.in/oh-nabl-data" target="_blank" rel="noreferrer">
-            NABL Data
-          </a>
-
-          <a href="https://www.orangehealth.in/responsible-disclosure-policy" target="_blank" rel="noreferrer">
-            Responsible Disclosure
-          </a>
-
-          <a href="https://www.orangehealth.in/vendor-code-of-conduct" target="_blank" rel="noreferrer">
-            Vendor Code of Conduct
-          </a>
-
-          <a
-            href="https://drive.google.com/drive/folders/1zH5q9TShhgKDpVbZ4L4hGrMmgaYnWxja?usp=drive_link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Biomedical Waste Disclosure
-          </a>
+          <a href="https://bluelinemd.com/">Privacy Policy</a>
+          <a href="https://bluelinemd.com/">Terms &amp; Services</a>
         </div>
 
       </div>

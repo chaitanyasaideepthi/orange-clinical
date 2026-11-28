@@ -1,79 +1,133 @@
+/* ==============================
+   ADDITIONAL INFO SECTION
+============================== */
 
 .additional-info-page {
   width: 100%;
-  padding: 45px 3%;
-  background: #fff;
+  background: #ffffff;
+  padding: 65px 5%;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+/* Main Layout */
+
 .additional-info-layout {
-  display: grid !important;
-  grid-template-columns: 27% minmax(0, 1fr) !important;
-  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 40px;
   align-items: start;
 }
 
-/* Left heading */
+/* ==============================
+   LEFT HEADING
+============================== */
+
 .additional-info-title {
-  padding: 15px 5px;
+  position: sticky;
+  top: 100px;
 }
 
 .additional-info-title h2 {
-  margin: 0;
-  padding: 0;
-  color: #008F9C;
-  font-size: 25px;
+  font-size: 34px;
   font-weight: 700;
+  color: #164e7a;
+  margin: 0;
+  line-height: 1.4;
 }
 
-/* Right accordion */
+.additional-info-title h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  background: #008f9c;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* ==============================
+   RIGHT CONTENT
+============================== */
+
 .additional-info-content {
   width: 100%;
 }
 
 .info-section {
-  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+  border-bottom: 1px solid #e2e9ed;
 }
 
+/* Accordion Heading */
+
 .info-heading {
-  width: 100% !important;
-  min-height: 58px;
-  padding: 15px 5px !important;
-  display: flex !important;
+  width: 100%;
+  min-height: 65px;
+  padding: 18px 12px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  border: none !important;
-  border-radius: 0 !important;
-  background: #fff !important;
-  color: #171717 !important;
-  font-size: 17px;
-  font-weight: 700;
-  text-align: left;
+  gap: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
   cursor: pointer;
-  box-shadow: none !important;
+  text-align: left;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #263746;
+
+  transition: all 0.3s ease;
 }
 
 .info-heading:hover {
-  color: #171717 !important;
-  background: #fff !important;
+  color: #008f9c;
+  background: #f4fbfb;
 }
+
+/* Arrow */
 
 .arrow {
-  color: #555;
-  font-size: 22px;
-  flex-shrink: 0;
+  min-width: 25px;
+  font-size: 25px;
+  font-weight: 400;
+  color: #008f9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* ==============================
+   ACCORDION CONTENT
+============================== */
 
 .info-content {
-  padding: 12px 5px 22px;
-  color: #000;
-  font-size: 14px;
-  line-height: 1.8;
+  padding: 5px 12px 22px;
+  animation: infoOpen 0.3s ease;
 }
 
+@keyframes infoOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text */
+
 .orange-text {
-  color: #000;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #5b6672;
 }
 
 .orange-text p {
@@ -81,61 +135,98 @@
 }
 
 .orange-text strong {
-  color: #000;
+  color: #164e7a;
+  font-weight: 700;
 }
 
-/* Blue links */
-.orange-text a,
-.centres-table a {
-  color: #0066cc;
-  text-decoration: none;
+/* Lists */
+
+.orange-text ul {
+  padding-left: 25px;
+  margin: 12px 0 18px;
 }
 
-.orange-text a:hover,
-.centres-table a:hover {
-  color: #0066cc;
-  text-decoration: none;
+.orange-text li {
+  margin-bottom: 8px;
+  color: #555f6b;
 }
 
-/* Table */
-.centres-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+/* Popular Tests */
 
-.centres-table th,
-.centres-table td {
-  padding: 12px;
-  border: 1px solid #e5e5e5;
-  text-align: left;
-  vertical-align: top;
-  color: #000;
-}
-
-.centres-table th {
-  background: #f8f8f8;
-}
-
-/* Only Popular Blood Tests in orange */
 .popular-tests {
-  color: #ff6b00 !important;
+  line-height: 2;
+  text-align: justify;
 }
 
-@media (max-width: 768px) {
+/* Links */
+
+.orange-text a {
+  color: #008f9c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.orange-text a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
   .additional-info-layout {
-    grid-template-columns: 1fr !important;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
+  .additional-info-title {
+    position: static;
+  }
+
+  .additional-info-title h2 {
+    font-size: 30px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
   .additional-info-page {
-    padding: 25px 4%;
+    padding: 40px 18px;
+  }
+
+  .additional-info-layout {
+    gap: 25px;
+  }
+
+  .additional-info-title h2 {
+    font-size: 26px;
   }
 
   .info-heading {
-    font-size: 15px;
+    min-height: 60px;
+    padding: 16px 5px;
+    font-size: 14px;
+    gap: 12px;
   }
 
-  .centres-table {
-    font-size: 12px;
+  .arrow {
+    font-size: 22px;
+  }
+
+  .info-content {
+    padding: 5px 5px 18px;
+  }
+
+  .orange-text {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .popular-tests {
+    text-align: left;
   }
 }

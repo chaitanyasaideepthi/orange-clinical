@@ -1,21 +1,36 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Remove unwanted horizontal scrollbar */
+html,
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  overflow-x: hidden;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
+/* Vertical scrollbar only */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #008f9c #f0f7ff;
 }
 
-.home,
-.page {
-  padding: 40px;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f7ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #ff4da6,
+    #9b59b6,
+    #ff9f43,
+    #d4c63c,
+    #42b8a5
+  );
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #008f9c;
 }

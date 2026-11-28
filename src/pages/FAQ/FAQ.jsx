@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import "./FAQ.css";
 
@@ -8,46 +7,45 @@ function FAQ() {
   const faqs = [
     {
       id: 1,
-      question:
-        "1. In how many cities does Orange Health Labs provide diagnostic services?",
+      question: "1. How can I book a diagnostic test?",
       answer: (
         <strong>
-          Orange Health Labs currently provides diagnostic services in six
-          cities: Bangalore, Mumbai, Delhi, Gurugram, Noida, and Hyderabad.
+          You can book a diagnostic test through the BlueLineMD website by
+          searching for your required test, adding it to your cart, selecting
+          your location, and booking a convenient appointment.
         </strong>
       ),
     },
     {
       id: 2,
-      question:
-        "2. Does Orange Health Labs have physical diagnostic centres?",
+      question: "2. Does BlueLineMD offer home sample collection?",
       answer: (
         <strong>
-          Yes. You can either book online for home collection or walk into
-          one of our collection centres near you for testing.
+          Yes, BlueLineMD offers home sample collection in selected
+          serviceable locations. You can check your location availability
+          on our website while booking your test.
         </strong>
       ),
     },
     {
       id: 3,
-      question:
-        "3. What are the service hours for at-home collection?",
+      question: "3. How long does it take to receive my reports?",
       answer: (
         <strong>
-          At-home collection is available between 6:00 AM and 10:00 PM via
-          our website or the Orange Health Labs app. If you prefer visiting
-          in person, our collection centres are open from 7:00 AM to 9:30 PM.
+          Report delivery time depends on the type of diagnostic test.
+          Most routine test reports are available within 24–48 hours.
+          Some specialized tests may take longer.
         </strong>
       ),
     },
     {
       id: 4,
-      question:
-        "4. Can I cancel or reschedule a booking?",
+      question: "4. How can I contact customer support?",
       answer: (
         <strong>
-          Yes. Simply connect with us on WhatsApp at 9008111144 and our
-          support team will assist you with cancellation or rescheduling.
+          You can contact BlueLineMD customer support by calling
+          +91 78999 16434 or emailing info@bluelinemd.com for
+          assistance with bookings, reports, and other queries.
         </strong>
       ),
     },
