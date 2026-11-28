@@ -36,7 +36,7 @@ function Footer() {
 
         {/* Copyright */}
         <p className="copyright">
-          © 2025 BluelineMD. All rights reserved.
+          © 2025 BluelineMD. All rights reserved. Powered by OneEHR
         </p>
 
       </div>

@@ -10,7 +10,7 @@ function FAQ() {
       question: "1. How can I book a diagnostic test?",
       answer: (
         <strong>
-          You can book a diagnostic test through the BlueLineMD website by
+          You can book a diagnostic test through the BluelineMD website by
           searching for your required test, adding it to your cart, selecting
           your location, and booking a convenient appointment.
         </strong>
@@ -18,10 +18,10 @@ function FAQ() {
     },
     {
       id: 2,
-      question: "2. Does BlueLineMD offer home sample collection?",
+      question: "2. Does BluelineMD offer home sample collection?",
       answer: (
         <strong>
-          Yes, BlueLineMD offers home sample collection in selected
+          Yes, BluelineMD offers home sample collection in selected
           serviceable locations. You can check your location availability
           on our website while booking your test.
         </strong>
@@ -43,7 +43,7 @@ function FAQ() {
       question: "4. How can I contact customer support?",
       answer: (
         <strong>
-          You can contact BlueLineMD customer support by calling
+          You can contact BluelineMD customer support by calling
           +91 78999 16434 or emailing info@bluelinemd.com for
           assistance with bookings, reports, and other queries.
         </strong>

@@ -2,8 +2,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Myaccount.css";
 
-import logo from "../../assets/images/MD logo.png";
-
 function MyAccount() {
   const navigate = useNavigate();
 
@@ -58,37 +56,27 @@ function MyAccount() {
 
   return (
     <div className="my-account-page">
-
       <div className="my-account-container">
 
-        {/* Profile Header with Logo */}
+        {/* Profile Header */}
         <div className="account-profile">
-
-          <div className="profile-avatar">
-            <img src={logo} alt="BlueLineMD Logo" />
-          </div>
-
           <div className="profile-info">
             <h2>BlueLineMD</h2>
             <p>My Account</p>
           </div>
-
         </div>
 
         {/* Account Menu */}
         <div className="account-section">
-
           <h3>My Account</h3>
 
           <div className="account-menu">
-
             {accountItems.map((item, index) => (
               <div
                 className="account-menu-item"
                 key={index}
                 onClick={() => navigate(item.path)}
               >
-
                 <div className="account-menu-icon">
                   {item.icon}
                 </div>
@@ -99,17 +87,13 @@ function MyAccount() {
                 </div>
 
                 <span className="account-arrow">›</span>
-
               </div>
             ))}
-
           </div>
-
         </div>
 
         {/* Help Section */}
         <div className="account-help">
-
           <h3>Need help?</h3>
 
           <a
@@ -118,7 +102,6 @@ function MyAccount() {
             rel="noreferrer"
             className="account-help-link"
           >
-
             <span className="account-menu-icon">💬</span>
 
             <div className="account-menu-content">
@@ -127,20 +110,14 @@ function MyAccount() {
             </div>
 
             <span className="account-arrow">›</span>
-
           </a>
-
         </div>
 
         {/* Footer Links */}
         <div className="account-footer">
-
           <div className="account-legal-links">
-
             <a
-              href="https://www.orangehealth.in/privacy-policy"
-              target="_blank"
-              rel="noreferrer"
+              href="/privacy-policy"
             >
               Privacy Policy
             </a>
@@ -148,13 +125,10 @@ function MyAccount() {
             <span>•</span>
 
             <a
-              href="https://www.orangehealth.in/terms"
-              target="_blank"
-              rel="noreferrer"
+              href="/terms"
             >
               Terms of Service
             </a>
-
           </div>
 
           <button
@@ -163,11 +137,9 @@ function MyAccount() {
           >
             Logout
           </button>
-
         </div>
 
       </div>
-
     </div>
   );
 }

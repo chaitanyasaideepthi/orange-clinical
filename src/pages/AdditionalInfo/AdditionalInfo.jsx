@@ -14,11 +14,11 @@ function AdditionalInfo() {
   const sections = [
     {
       id: "about",
-      title: "BlueLineMD - Your Trusted Diagnostic Partner",
+      title: "BluelineMD - Your Trusted Diagnostic Partner",
       content: (
         <div className="orange-text">
           <p>
-            <strong>BlueLineMD</strong> is a smart, modern healthcare
+            <strong>BluelineMD</strong> is a smart, modern healthcare
             platform designed to make diagnostic services convenient
             and accessible. We help patients explore diagnostic tests,
             health checkups, and convenient booking options.
@@ -54,7 +54,7 @@ function AdditionalInfo() {
         <div className="orange-text">
           <p>
             <strong>Step 1:</strong> Browse and search for your required
-            diagnostic test on the BlueLineMD website.
+            diagnostic test on the BluelineMD website.
           </p>
 
           <p>
@@ -77,7 +77,7 @@ function AdditionalInfo() {
 
     {
       id: "why",
-      title: "Why Choose BlueLineMD?",
+      title: "Why Choose BluelineMD?",
       content: (
         <div className="orange-text">
           <p>

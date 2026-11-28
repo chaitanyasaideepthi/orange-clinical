@@ -1,243 +1,236 @@
 
-/* MAIN PAGE */
-
+/* Main Page */
 .my-account-page {
   width: 100%;
   min-height: 100vh;
+  background: #f8fbfc;
   padding: 40px 20px;
-  background: #f7f8fa;
   font-family: Arial, sans-serif;
-  box-sizing: border-box;
 }
 
+/* Main Container */
 .my-account-container {
+  max-width: 850px;
   width: 100%;
-  max-width: 650px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-sizing: border-box;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 143, 156, 0.08);
 }
 
-/* PROFILE HEADER */
-
+/* Profile Header */
 .account-profile {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.profile-avatar {
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #eef4ff;
-  color: #2875ff;
-  font-size: 25px;
-  font-weight: 700;
-  overflow: hidden;
-}
-
-.profile-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  padding: 20px 10px 25px;
+  border-bottom: 1px solid #e8eef0;
 }
 
 .profile-info h2 {
-  margin: 0 0 5px;
-  color: #222222;
-  font-size: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #008f9c;
+  margin-bottom: 8px;
 }
 
 .profile-info p {
-  margin: 0;
-  color: #888888;
-  font-size: 14px;
+  color: #777;
+  font-size: 15px;
 }
 
-/* SECTION */
-
+/* Account Section */
 .account-section {
   margin-top: 25px;
 }
 
 .account-section h3,
 .account-help h3 {
-  margin: 0 0 12px;
-  color: #333333;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 19px;
+  color: #164e7a;
+  margin-bottom: 18px;
 }
 
-/* ACCOUNT MENU */
-
+/* Account Menu */
 .account-menu {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .account-menu-item,
 .account-help-link {
   display: flex;
   align-items: center;
-  gap: 15px;
-  min-height: 75px;
-  padding: 12px 5px;
-  border-bottom: 1px solid #eeeeee;
+  gap: 16px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e7eff1;
+  border-radius: 12px;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  box-sizing: border-box;
-  transition: background 0.2s ease;
+  transition: 0.3s ease;
 }
 
+/* Hover Effect */
 .account-menu-item:hover,
 .account-help-link:hover {
-  background: #f5f8ff;
+  background: #f0fbfc;
+  border-color: #008f9c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 143, 156, 0.08);
 }
 
-/* ICON */
-
+/* Icons */
 .account-menu-icon {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background: #eef4ff;
-  font-size: 21px;
+  font-size: 23px;
+  background: #eaf8f9;
+  border-radius: 12px;
 }
 
-/* CONTENT */
-
+/* Menu Content */
 .account-menu-content {
   flex: 1;
-  min-width: 0;
 }
 
 .account-menu-content h4 {
-  margin: 0 0 6px;
-  color: #292929;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
+  color: #164e7a;
+  margin-bottom: 5px;
 }
 
 .account-menu-content p {
-  margin: 0;
-  color: #888888;
-  font-size: 12px;
+  font-size: 13px;
+  color: #777;
   line-height: 1.5;
 }
 
-/* RIGHT ARROW */
-
+/* Arrow */
 .account-arrow {
-  color: #2875ff;
-  font-size: 25px;
-  padding: 0 8px;
+  font-size: 26px;
+  color: #008f9c;
+  transition: 0.3s ease;
 }
 
-/* HELP */
+.account-menu-item:hover .account-arrow,
+.account-help-link:hover .account-arrow {
+  transform: translateX(4px);
+}
 
+/* Help Section */
 .account-help {
   margin-top: 30px;
 }
 
 .account-help-link {
-  border-bottom: none;
+  width: 100%;
 }
 
-/* FOOTER */
-
+/* Footer */
 .account-footer {
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #eeeeee;
-  text-align: center;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #e8eef0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
+/* Legal Links */
 .account-legal-links {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 12px;
+  gap: 12px;
 }
 
 .account-legal-links a {
-  color: #555555;
+  color: #008f9c;
   text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s ease;
 }
 
 .account-legal-links a:hover {
-  color: #2875ff;
+  color: #164e7a;
+  text-decoration: underline;
 }
 
 .account-legal-links span {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
-/* LOGOUT */
-
+/* Logout Button */
 .account-logout {
-  margin-top: 22px;
-  padding: 10px 25px;
-  border: 1px solid #2875ff;
-  border-radius: 7px;
+  border: 1px solid #e74c3c;
   background: #ffffff;
-  color: #2875ff;
+  color: #e74c3c;
+  padding: 11px 24px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
 }
 
 .account-logout:hover {
-  background: #eef4ff;
-  border-color: #2875ff;
-  color: #2875ff;
+  background: #e74c3c;
+  color: #ffffff;
 }
 
-/* RESPONSIVE */
+/* Tablet */
+@media (max-width: 768px) {
+  .my-account-page {
+    padding: 25px 15px;
+  }
 
-@media (max-width: 600px) {
+  .my-account-container {
+    padding: 22px;
+  }
+
+  .profile-info h2 {
+    font-size: 23px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
   .my-account-page {
     padding: 15px 10px;
   }
 
   .my-account-container {
     padding: 18px 14px;
-  }
-
-  .profile-avatar {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
+    border-radius: 12px;
   }
 
   .profile-info h2 {
-    font-size: 18px;
+    font-size: 21px;
+  }
+
+  .account-section h3,
+  .account-help h3 {
+    font-size: 17px;
   }
 
   .account-menu-item,
   .account-help-link {
-    gap: 10px;
-    min-height: 70px;
+    padding: 13px;
+    gap: 12px;
   }
 
   .account-menu-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 19px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 20px;
   }
 
   .account-menu-content h4 {
@@ -245,6 +238,23 @@
   }
 
   .account-menu-content p {
-    font-size: 11px;
+    font-size: 12px;
+  }
+
+  .account-arrow {
+    font-size: 22px;
+  }
+
+  .account-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-legal-links {
+    flex-wrap: wrap;
+  }
+
+  .account-logout {
+    width: 100%;
   }
 }

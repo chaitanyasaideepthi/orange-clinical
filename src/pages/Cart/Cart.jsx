@@ -198,9 +198,10 @@ function Cart() {
                 </strong>
               </div>
 
+              {/* Proceed to Payment */}
               <button
                 className="proceed-btn"
-                onClick={() => alert("Proceeding to checkout")}
+                onClick={() => navigate("/payment")}
               >
                 Proceed →
               </button>
@@ -222,4 +223,5 @@ function Cart() {
 }
 
 export default Cart;
+
 
